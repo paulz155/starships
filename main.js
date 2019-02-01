@@ -23,7 +23,6 @@ new Vue({
     },
     methods: {
 		showShip: function(s) {
-			console.log(s);
 			this.ship = s;
 			this.isModalVisible = true;
 		},
