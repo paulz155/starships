@@ -1,0 +1,11 @@
+<div>
+	<input placeholder='search' v-model="search">
+	<div v-for="ship in ships" @click="showShip(ship)">{{ship.name}}</div>	
+	Count: <b>{{count}}</b>
+	<button @click="loadShips(previous)" v-if='previous'>Previus</button><button @click="loadShips(next)" v-if='next'>Next</button>
+	<modal
+	v-show="isModalVisible"
+	v-bind:ship='ship'
+	@close="isModalVisible = false"
+	></modal>
+</div>
